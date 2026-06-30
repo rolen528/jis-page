@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate Profile</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+/* 부드러운 스크롤 및 폰트 설정 */
+html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white overflow-x-hidden">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-950 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    
+    <a href="#hero" class="text-2xl sm:text-3xl font-extrabold tracking-wider text-white">
+    JIS<span class="text-blue-500">.</span>
+    </a>
+
+    <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+    <a href="#about" class="hover:text-white transition-colors">회사소개</a>
+    <a href="#business" class="hover:text-white transition-colors">사업영역</a>
+    <a href="#contact" class="hover:text-white transition-colors">문의하기</a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white focus:outline-none">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+    </button>
+
+</div>
+
+<div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3 text-sm">
+    <a href="#about" class="block text-slate-400 hover:text-white pb-2">회사소개</a>
+    <a href="#business" class="block text-slate-400 hover:text-white pb-2">사업영역</a>
+    <a href="#contact" class="block text-slate-400 hover:text-white">문의하기</a>
+</div>
+</header>
+
+<section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950 -z-10"></div>
+<div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+    <span class="text-xs font-semibold tracking-widest text-blue-500 uppercase">INNOVATION & EXCELLENCE</span>
+    <h1 class="mt-4 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+    기술의 한계를 넘어<br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">새로운 가치</span>를 만듭니다
+    </h1>
+    <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+    고객의 비즈니스를 완벽하게 이해하고 혁신적인 솔루션을 바탕으로 지속 가능한 미래를 함께 구축합니다.
+    </p>
+</div>
+</section>
+
+<section id="about" class="py-32 px-6 max-w-6xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div data-aos="fade-right" data-aos-duration="1000">
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">신뢰와 기술력으로<br />증명합니다.</h2>
+    <p class="mt-6 text-slate-400 leading-relaxed">
+        다년간 축적된 노하우와 압도적인 실행력을 바탕으로 업계 최고 수준의 품질을 보장합니다. 단순한 서비스를 넘어 파트너의 비즈니스 성장을 견인합니다.
+    </p>
+    </div>
+    <div class="grid grid-cols-2 gap-6" data-aos="fade-left" data-aos-duration="1000">
+    <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800/80">
+        <div class="text-3xl font-bold text-blue-500">100%</div>
+        <div class="mt-2 text-sm text-slate-400">프로젝트 완수율</div>
+    </div>
+    <div class="p-6 rounded-2xl bg-slate-900/50 border border-slate-800/80">
+        <div class="text-3xl font-bold text-blue-500">Global</div>
+        <div class="mt-2 text-sm text-slate-400">글로벌 파트너십</div>
+    </div>
+    </div>
+</div>
+</section>
+
+<section id="business" class="py-32 bg-slate-900/30 border-y border-slate-800/50 px-6">
+<div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Core Business</h2>
+    <p class="mt-4 text-slate-400">최상의 결과를 도출하기 위한 우리의 핵심 역량입니다.</p>
+    </div>
+    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">💡</div>
+        <h3 class="mt-6 text-xl font-semibold text-white">첨단 제조 & 설비</h3>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">정밀 설계 및 효율성을 극대화한 스마트 시스템 구축.</p>
+    </div>
+    <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">⚙️</div>
+        <h3 class="mt-6 text-xl font-semibold text-white">정밀 공정 개발</h3>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">오차를 허용하지 않는 철저한 맞춤형 프로세스 설계.</p>
+    </div>
+    <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">🌐</div>
+        <h3 class="mt-6 text-xl font-semibold text-white">글로벌 무역·수출</h3>
+        <p class="mt-3 text-sm text-slate-400 leading-relaxed">국제 기준을 충족하는 규격 관리 및 유연한 글로벌 공급망.</p>
+    </div>
+    </div>
+</div>
+</section>
+
+<footer id="contact" class="py-16 px-6 border-t border-slate-800/80 text-center text-sm text-slate-500">
+<p>© 2026 COMPANY NAME. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// 애니메이션 초기화
+AOS.init({ once: true, offset: 50 });
+
+// 모바일 메뉴 토글
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+</script>
+</body>
+</html>
