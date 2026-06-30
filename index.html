@@ -9,6 +9,27 @@
 <style>
 /* 부드러운 스크롤 및 폰트 설정 */
 html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
+HTML
+<style>
+/* 부드러운 스크롤 및 폰트 설정 */
+html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
+
+/* 무한 스크롤 애니메이션 추가 */
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+display: flex;
+width: max-content;
+/* 15s 숫자를 줄이면 빨라지고, 늘리면 느려집니다 */
+animation: scroll 15s linear infinite; 
+}
+/* 마우스 올렸을 때 멈추게 하는 효과 (선택사항) */
+.animate-scroll:hover {
+animation-play-state: paused;
+}
+
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white overflow-x-hidden">
@@ -101,7 +122,44 @@ html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
 </div>
 </section>
 
-<footer id="contact" class="py-16 px-6 border-t border-slate-800/80 text-center text-sm text-slate-500">
+
+<section id="contact" class="py-32 bg-slate-900/30 border-y border-slate-800/50 px-6">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+    <span class="text-xs font-semibold tracking-widest text-blue-500 uppercase">문의하기</span>
+    <h1 class="mt-4 text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+    기술의 한계를 넘어<br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">새로운 가치</span>를 만듭니다
+    </h1>
+    <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+    고객의 비즈니스를 완벽하게 이해하고 혁신적인 솔루션을 바탕으로 지속 가능한 미래를 함께 구축합니다.
+    </p>
+</div>
+</section>
+<footer id="foot-tail" class="py-16 px-6 border-t border-slate-800/80 text-center text-sm text-slate-500 relative overflow-hidden">
+<span class="text-xs font-semibold tracking-widest text-blue-500 uppercase">주요 거래처</span>
+
+<!-- 흘러가는 로고 애니메이션 컨테이너 -->
+<div class="mt-12 mb-16 max-w-4xl mx-auto relative flex items-center overflow-hidden">
+
+<!-- 양쪽 끝 그라데이션 (로고가 부드럽게 나타나고 사라지게 함) -->
+<div class="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none"></div>
+<div class="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none"></div>
+
+<!-- 움직이는 트랙 -->
+<div class="animate-scroll gap-16 pr-16">
+    
+    <!-- [원본 세트] 이미지 파일명을 로고에 맞게 변경하세요 -->
+    <img src="img/elmex_logo_white.png" alt="거래처 1" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    <img src="img/microgiene_logo.png" alt="거래처 2" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    <img src="img/JSES_logo.png" alt="거래처 3" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    
+    <!-- [복제 세트] 무한 반복을 위해 원본과 똑같이 한 번 더 넣어줍니다 -->
+    <img src="img/elmex_logo_white.png" alt="거래처 1" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    <img src="img/microgiene_logo.png" alt="거래처 2" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    <img src="img/JSES_logo.png" alt="거래처 3" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    
+</div>
+</div>
+
 <p>© 2026 COMPANY NAME. All rights reserved.</p>
 </footer>
 
