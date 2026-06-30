@@ -14,6 +14,17 @@ HTML
 /* 부드러운 스크롤 및 폰트 설정 */
 html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
 
+.logo img {
+  /* 기본 밝기: 0(검은색) ~ 1(원본 밝기). 너무 어둡다면 0.8 정도로 올려보세요. */
+    filter: brightness(1); 
+    transition: filter 0.3s ease;
+}
+
+.logo img:hover {
+  /* 마우스 올렸을 때 원본 밝기로 (또는 1.2 등으로 더 밝게) */
+    filter: brightness(1); 
+}
+
 /* 무한 스크롤 애니메이션 추가 */
 @keyframes scroll {
 0% { transform: translateX(0); }
@@ -22,8 +33,16 @@ html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
 .animate-scroll {
 display: flex;
 width: max-content;
-/* 15s 숫자를 줄이면 빨라지고, 늘리면 느려집니다 */
-animation: scroll 15s linear infinite; 
+/* 기본 PC 환경의 속도 */
+animation: scroll 10s linear infinite; 
+}
+
+/* 화면 너비가 768px 이하(주로 태블릿 및 모바일)일 때만 아래 코드가 덮어씁니다 */
+@media (max-width: 768px) {
+.animate-scroll {
+/* 숫자를 줄여서 모바일에서 더 빠르게 움직이도록 수정합니다 */
+animation: scroll 5s linear infinite; 
+}
 }
 /* 마우스 올렸을 때 멈추게 하는 효과 (선택사항) */
 .animate-scroll:hover {
@@ -160,7 +179,7 @@ animation-play-state: paused;
 </div>
 </div>
 
-<p>© 2026 COMPANY NAME. All rights reserved.</p>
+<p>© 2026 JIS. All rights reserved.</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
