@@ -66,3 +66,16 @@ if (e.target === modal || e.target.classList.contains('modal-content-area')) {
 closeImageModal();
 }
 });
+
+// --- 상단 스크롤 진행률 바 기능 ---
+window.addEventListener('scroll', () => {
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+        // 현재 스크롤 위치 / (전체 문서 높이 - 화면 높이) * 100
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+        
+        scrollProgress.style.width = scrollPercentage + '%';
+    }
+});

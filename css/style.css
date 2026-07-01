@@ -41,3 +41,25 @@ animation: scroll 20s linear infinite;
 animation-play-state: paused;
 }
 
+/* --- 전체 페이지 스크롤바 강제 표시 및 디자인 --- */
+
+/* 1. 스크롤바 전체 영역 (너비 설정) */
+::-webkit-scrollbar {
+  width: 10px; /* 모바일 화면을 너무 많이 차지하지 않게 얇고 깔끔하게 설정 */
+}
+
+/* 2. 스크롤바가 굴러가는 트랙(바탕) */
+::-webkit-scrollbar-track {
+  background: #020617; /* 사이트 배경(slate-950)과 동일하게 맞춰 자연스럽게 */
+}
+
+/* 3. 움직이는 스크롤 막대(손잡이) */
+::-webkit-scrollbar-thumb {
+  background: #475569; /* 눈에 띄는 짙은 회색(slate-600) */
+  border-radius: 10px; /* 모서리를 둥글게 처리하여 고급스럽게 */
+}
+
+/* 4. 스크롤 막대를 터치(또는 마우스 오버)했을 때 */
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* 살짝 더 밝아지는 효과(slate-500) */
+}
