@@ -6,50 +6,7 @@
 <title>Corporate Profile</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style>
-/* 부드러운 스크롤 및 폰트 설정 */
-html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
-HTML
-<style>
-/* 부드러운 스크롤 및 폰트 설정 */
-html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
-
-.logo img {
-  /* 기본 밝기: 0(검은색) ~ 1(원본 밝기). 너무 어둡다면 0.8 정도로 올려보세요. */
-    filter: brightness(1); 
-    transition: filter 0.3s ease;
-}
-
-.logo img:hover {
-  /* 마우스 올렸을 때 원본 밝기로 (또는 1.2 등으로 더 밝게) */
-    filter: brightness(1); 
-}
-
-/* 무한 스크롤 애니메이션 추가 */
-@keyframes scroll {
-0% { transform: translateX(0); }
-100% { transform: translateX(-50%); }
-}
-.animate-scroll {
-display: flex;
-width: max-content;
-/* 기본 PC 환경의 속도 */
-animation: scroll 10s linear infinite; 
-}
-
-/* 화면 너비가 768px 이하(주로 태블릿 및 모바일)일 때만 아래 코드가 덮어씁니다 */
-@media (max-width: 768px) {
-.animate-scroll {
-/* 숫자를 줄여서 모바일에서 더 빠르게 움직이도록 수정합니다 */
-animation: scroll 5s linear infinite; 
-}
-}
-/* 마우스 올렸을 때 멈추게 하는 효과 (선택사항) */
-.animate-scroll:hover {
-animation-play-state: paused;
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white overflow-x-hidden">
 
@@ -63,6 +20,7 @@ animation-play-state: paused;
     <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
     <a href="#about" class="hover:text-white transition-colors">회사소개</a>
     <a href="#business" class="hover:text-white transition-colors">사업영역</a>
+    <a href="#gallery" class="hover:text-white transition-colors">진행상품</a>
     <a href="#contact" class="hover:text-white transition-colors">문의하기</a>
     </nav>
 
@@ -77,6 +35,7 @@ animation-play-state: paused;
 <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3 text-sm">
     <a href="#about" class="block text-slate-400 hover:text-white pb-2">회사소개</a>
     <a href="#business" class="block text-slate-400 hover:text-white pb-2">사업영역</a>
+    <a href="#gallery" class="block text-slate-400 hover:text-white pb-2">진행상품</a>
     <a href="#contact" class="block text-slate-400 hover:text-white">문의하기</a>
 </div>
 </header>
@@ -141,6 +100,79 @@ animation-play-state: paused;
 </div>
 </section>
 
+<section id="gallery" class="py-32 px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Products & Gallery</h2>
+        <p class="mt-4 text-slate-400">혁신적인 제품과 현장의 생생한 모습을 확인해 보세요.</p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/ST-25.png" alt="ST-25 PBS Swab KIT" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">ST-25 PBS Swab KIT</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
+        <img src="img/photo2.jpg" alt="1ml Swab KIT" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">ST-1 1ml Swab KIT</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/DS-9.jpg" alt="단백질 잔류 검사 키트" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">DS-9 희석액 키트</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="250">
+        <img src="img/photo4.jpg" alt="정밀 3D 프린팅 공정" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">정밀 3D 프린팅 공정</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+        <img src="img/photo5.jpg" alt="자동화 보울 피더 설비" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">일본 무역</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="350">
+        <img src="img/machine.jpg" alt="제조 설비 제어 시스템" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">주문 제조/제작</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+        <img src="img/photo7.jpg" alt="QR 코드 마킹 시스템" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">일본 현지 전문가</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="450">
+        <img src="img/photo8.jpg" alt="글로벌 수출 패키징" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">글로벌 수출 패키징</span>
+        </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+        <img src="img/photo9.jpg" alt="현장 검수 및 테스트" class="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-slate-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="text-white font-medium tracking-wide">무역 연계 컨설팅</span>
+        </div>
+        </div>
+
+    </div>
+</section>
 
 <section id="contact" class="py-32 bg-slate-900/30 border-y border-slate-800/50 px-6">
     <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
@@ -166,15 +198,25 @@ animation-play-state: paused;
 <!-- 움직이는 트랙 -->
 <div class="animate-scroll gap-16 pr-16">
     
-    <!-- [원본 세트] 이미지 파일명을 로고에 맞게 변경하세요 -->
-    <img src="img/elmex_logo_white.png" alt="거래처 1" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
-    <img src="img/microgiene_logo.png" alt="거래처 2" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
-    <img src="img/JSES_logo.png" alt="거래처 3" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
-    
-    <!-- [복제 세트] 무한 반복을 위해 원본과 똑같이 한 번 더 넣어줍니다 -->
-    <img src="img/elmex_logo_white.png" alt="거래처 1" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
-    <img src="img/microgiene_logo.png" alt="거래처 2" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
-    <img src="img/JSES_logo.png" alt="거래처 3" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    <a href="https://www.elmex.co.jp" target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <img src="img/elmex_logo_white.png" alt="ELMEX" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    </a>
+    <a href="https://microgiene.com/?srsltid=AfmBOopXOZ7XzlIkLkrub5MyxHeTtH_GXwa7AZzWBYkeKI-XoST-OVRV" target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <img src="img/microgiene_logo.png" alt="Microgiene" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <img src="img/JSES_logo.png" alt="JSES" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    </a>
+
+    <a href="https://www.elmex.co.jp" target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <img src="img/elmex_logo_white.png" alt="ELMEX" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    </a>
+    <a href="https://microgiene.com/?srsltid=AfmBOopXOZ7XzlIkLkrub5MyxHeTtH_GXwa7AZzWBYkeKI-XoST-OVRV" target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <img src="img/microgiene_logo.png" alt="Microgiene" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <img src="img/JSES_logo.png" alt="JSES" class="h-20 w-64 object-contain opacity-40 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 cursor-pointer">
+    </a>
     
 </div>
 </div>
@@ -183,16 +225,6 @@ animation-play-state: paused;
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-// 애니메이션 초기화
-AOS.init({ once: true, offset: 50 });
-
-// 모바일 메뉴 토글
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
