@@ -26,14 +26,14 @@ html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
 display: flex;
 width: max-content;
 /* 기본 PC 환경의 속도 */
-animation: scroll 10s linear infinite; 
+animation: scroll 30s linear infinite; 
 }
 
 /* 화면 너비가 768px 이하(주로 태블릿 및 모바일)일 때만 아래 코드가 덮어씁니다 */
 @media (max-width: 768px) {
 .animate-scroll {
 /* 숫자를 줄여서 모바일에서 더 빠르게 움직이도록 수정합니다 */
-animation: scroll 5s linear infinite; 
+animation: scroll 20s linear infinite; 
 }
 }
 /* 마우스 올렸을 때 멈추게 하는 효과 (선택사항) */
