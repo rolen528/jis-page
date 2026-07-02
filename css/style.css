@@ -3,9 +3,6 @@
 html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
 HTML
 
-/* 부드러운 스크롤 및 폰트 설정 */
-html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
-
 .logo img {
   /* 기본 밝기: 0(검은색) ~ 1(원본 밝기). 너무 어둡다면 0.8 정도로 올려보세요. */
     filter: brightness(1); 
