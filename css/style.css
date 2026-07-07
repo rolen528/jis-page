@@ -60,3 +60,24 @@ animation-play-state: paused;
 ::-webkit-scrollbar-thumb:hover {
   background: #64748b; /* 살짝 더 밝아지는 효과(slate-500) */
 }
+
+/* --- 온라인 문의 버튼 스타일 --- */
+/* 온라인 문의 버튼 디자인 */
+.inquiry-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #1a365d; /* 진한 네이비색 (회사 로고색에 맞춰 변경 가능) */
+  color: #ffffff; /* 글자색은 흰색 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px; /* 모서리를 둥글게 */
+  transition: all 0.3s ease; /* 마우스 올렸을 때 부드러운 효과 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 살짝 그림자 효과 */
+}
+
+/* 마우스를 올렸을 때의 버튼 색상 변화 */
+.inquiry-btn:hover {
+  background-color: #0f2240; /* 더 진한 색으로 변함 */
+  transform: translateY(-2px); /* 살짝 위로 떠오르는 효과 */
+}
