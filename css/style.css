@@ -81,3 +81,116 @@ animation-play-state: paused;
   background-color: #0f2240; /* 더 진한 색으로 변함 */
   transform: translateY(-2px); /* 살짝 위로 떠오르는 효과 */
 }
+
+/* 아코디언 전체 컨테이너 */
+.cert-accordion-container {
+  max-width: 800px;
+  margin: 30px auto;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 각각의 아코디언 아이템 */
+details.cert-details {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 마우스 올렸을 때 효과 */
+details.cert-details:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 클릭하는 제목 부분 */
+summary.cert-summary {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none; /* 기본 화살표 제거 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+/* 사파리 등 기본 화살표 숨김 완벽 적용 */
+summary.cert-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 우측 + / x 아이콘 애니메이션 */
+summary.cert-summary::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+  color: #0056b3; /* 회사 로고 색상에 맞춰 변경 가능 */
+  transition: transform 0.3s ease;
+}
+
+/* 아코디언이 열렸을 때 우측 아이콘 회전(x 모양으로) */
+details.cert-details[open] summary.cert-summary::after {
+  transform: rotate(45deg);
+}
+
+/* 열렸을 때 펼쳐지는 내용 부분 */
+.cert-content {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  animation: fadeInDown 0.4s ease-out; /* 부드럽게 열리는 애니메이션 */
+}
+
+.cert-content strong {
+  color: #222;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 우측 하단 플로팅 문의 버튼 */
+.floating-inquiry-btn {
+  position: fixed; /* 화면에 무조건 고정 */
+  bottom: 40px; /* 아래에서 40px 띄움 */
+  right: 40px; /* 오른쪽에서 40px 띄움 */
+  background-color: #1a365d; /* 진한 네이비색 */
+  color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 50px; /* 양옆이 완전히 둥근 알약 모양 */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 입체감 있는 그림자 */
+  z-index: 9999; /* 다른 모든 사진이나 글씨보다 무조건 맨 위에 오도록 설정 */
+  transition: all 0.3s ease;
+}
+
+/* 마우스 올렸을 때 효과 */
+.floating-inquiry-btn:hover {
+  background-color: #0f2240;
+  transform: translateY(-3px); /* 살짝 위로 점프 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 모바일 화면(스마트폰)을 위한 크기 조정 */
+@media (max-width: 768px) {
+  .floating-inquiry-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

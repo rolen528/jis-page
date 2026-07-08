@@ -8,6 +8,14 @@ menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
+// 메뉴 항목 클릭 시 창 닫기
+const mobileLinks = mobileMenu.querySelectorAll('a'); // 메뉴 안의 모든 링크 찾기
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden'); // 클릭하면 hidden 클래스를 추가해서 숨김
+    });
+});
+
 // --- 이미지 확대(모달) 기능 ---
 // --- 이미지 확대(모달) 및 텍스트 표시 기능 ---
 const modal = document.getElementById('image-modal');
@@ -16,7 +24,7 @@ const modalText = document.getElementById('modal-text'); // 글자가 들어갈 
 const closeModalBtn = document.getElementById('modal-close');
 
 // 갤러리 섹션의 모든 이미지 박스 선택
-const galleryItems = document.querySelectorAll('#gallery .group');
+const galleryItems = document.querySelectorAll('#gallery .group, .cert-modal-trigger');
 
 // 각 이미지 박스에 클릭 이벤트 추가
 galleryItems.forEach(item => {
@@ -79,3 +87,4 @@ window.addEventListener('scroll', () => {
         scrollProgress.style.width = scrollPercentage + '%';
     }
 });
+
