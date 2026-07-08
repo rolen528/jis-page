@@ -68,6 +68,9 @@ modalText.textContent = '';
 // 닫기 버튼 클릭 시 닫음
 closeModalBtn.addEventListener('click', closeImageModal);
 
+// 열려있는 사진 자체를 클릭(터치)해도 닫히도록 설정
+modalImg.addEventListener('click', closeImageModal);
+
 // 이미지 바깥의 어두운 배경 클릭 시 닫음 (사진이나 글자를 클릭했을 땐 안 닫히게 예외 처리)
 modal.addEventListener('click', (e) => {
 if (e.target === modal || e.target.classList.contains('modal-content-area')) {
