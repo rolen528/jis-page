@@ -90,4 +90,3 @@ window.addEventListener('scroll', () => {
         scrollProgress.style.width = scrollPercentage + '%';
     }
 });
-

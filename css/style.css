@@ -161,13 +161,14 @@ details.cert-details[open] summary.cert-summary::after {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* 우측 하단 플로팅 문의 버튼 */
+/* 하단 중앙 플로팅 문의 버튼 */
 .floating-inquiry-btn {
   position: fixed; /* 화면에 무조건 고정 */
   bottom: 40px; /* 아래에서 40px 띄움 */
-  right: 40px; /* 오른쪽에서 40px 띄움 */
-  background-color: #1a365d; /* 진한 네이비색 */
-  color: #ffffff;
+  left: 50%; /* 화면의 정확히 중간 지점으로 이동 */
+  transform: translateX(-50%); /* 버튼 넓이의 절반만큼 왼쪽으로 당겨서 완벽한 정중앙 맞춤 */
+  background-color: #ffffff;
+  color: #0f1052;
   padding: 16px 28px;
   border-radius: 50px; /* 양옆이 완전히 둥근 알약 모양 */
   font-size: 16px;
@@ -178,10 +179,10 @@ details.cert-details[open] summary.cert-summary::after {
   transition: all 0.3s ease;
 }
 
-/* 마우스 올렸을 때 효과 */
 .floating-inquiry-btn:hover {
-  background-color: #0f2240;
-  transform: translateY(-3px); /* 살짝 위로 점프 */
+  background-color: #f0f0f0;
+  /* X축 중앙 정렬을 유지하면서 위로 3px 띄우기 */
+  transform: translateX(-50%) translateY(-3px); 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -189,8 +190,9 @@ details.cert-details[open] summary.cert-summary::after {
 @media (max-width: 768px) {
   .floating-inquiry-btn {
     bottom: 20px;
-    right: 20px;
     padding: 12px 20px;
     font-size: 14px;
+    /* 모바일에서도 중앙 정렬 유지, 크기만 축소 */
+    width: max-content; 
   }
 }
