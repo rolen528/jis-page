@@ -1,4 +1,10 @@
 
+/* html과 body 전체의 가로 스크롤 터짐을 강제로 차단 */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
 /* 부드러운 스크롤 및 폰트 설정 */
 html { scroll-behavior: smooth; font-family: 'Pretendard', sans-serif; }
 HTML
