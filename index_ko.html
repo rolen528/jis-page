@@ -16,6 +16,13 @@
 <meta property="og:image" content="/img/jis_logo.png">
 </head>
 
+<script>
+  // 주소창에서 .html 확장자 숨기기
+    if (location.pathname.endsWith('.html')) {
+    const cleanUrl = location.pathname.replace(/index_?/, '').replace('.html', '');
+    history.replaceState(null, '', cleanUrl || '/');
+    }
+</script>
 
 <!-- 우측 상단 대형 플로팅 언어 스위처 -->
 <div class="fixed top-24 right-6 md:right-10 z-40 flex items-center gap-3 px-5 py-2.5 bg-slate-900/95 border-2 border-slate-700 rounded-2xl shadow-2xl backdrop-blur-md">
