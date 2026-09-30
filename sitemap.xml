@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://jis-global.com/index.html</loc>
+        <lastmod>2026-09-29</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://jis-global.com/index_ko.html</loc>
+        <lastmod>2026-09-29</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://jis-global.com/index_en.html</loc>
+        <lastmod>2026-09-29</lastmod>
+        <priority>0.80</priority>
+    </url>
+</urlset>
